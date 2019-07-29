@@ -1,0 +1,24 @@
+#Page index : LE NERF de la guerre car affichage principal sur le site
+
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>
+   
+    #Redirection vers new_gossip.erb
+    <p>Cliquez <a href="gossips/new/">ici</a> pour créer votre potin ! </p>
+
+     #Affichage des gossip
+    <% gossips.each do |gossip| %>
+      <p>
+        <%= gossip.author %><br/>
+        <%= gossip.content %>
+      </p>
+    <% end %>
+
+    #Ne fonctionne pas ><
+    <p>cliquez <a href="gossips/id/">ici</a> pour consulter les potins !</p>
+
+    </body>
+</html>
